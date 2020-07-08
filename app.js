@@ -1,9 +1,9 @@
 // Book Class: Represents a Book
 class Book {
-  constructor(title, author, pages) {
+  constructor(title, author, page) {
     this.title = title;
     this.author = author;
-    this.pages = pages;
+    this.page = page;
   }
 }
 
@@ -23,7 +23,7 @@ class UI {
     row.innerHTML = `
       <td>${book.title}</td>
       <td>${book.author}</td>
-      <td>${book.pages}</td>
+      <td>${book.page}</td>
       <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
     `;
 
@@ -51,7 +51,7 @@ class UI {
   static clearFields() {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
-    document.querySelector('#pages').value = '';
+    document.querySelector('#page').value = '';
   }
 }
 
@@ -74,11 +74,11 @@ class Store {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBook(pages) {
+  static removeBook(page) {
     const books = Store.getBooks();
 
     books.forEach((book, index) => {
-      if (book.pages === pages) {
+      if (book.page === page) {
         books.splice(index, 1);
       }
     });
@@ -98,14 +98,14 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   // Get form values
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-  const pages = document.querySelector('#pages').value;
+  const page = document.querySelector('#page').value;
 
   // Validate
-  if (title === '' || author === '' || pages === '') {
+  if (title === '' || author === '' || page === '') {
     UI.showAlert('Please fill in all fields', 'danger');
   } else {
     // Instatiate book
-    const book = new Book(title, author, pages);
+    const book = new Book(title, author, page);
 
     // Add Book to UI
     UI.addBookToList(book);
