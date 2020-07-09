@@ -44,12 +44,11 @@ function pullFromLocalStorage() {
 
 function addBookToLibrary() {
   if (
-    title.value === '' ||
-    author.value === '' ||
-    pages.value === '' ||
-    read.value === ''
-  )
-    return;
+    title.value === ''
+    || author.value === ''
+    || pages.value === ''
+    || read.value === ''
+  ) return;
   const book = new Book(title.value, author.value, pages.value, read.value);
   myLibrary.push(book);
   pushToLocalStorage();
