@@ -70,10 +70,10 @@ function render() {
       property.className = 'properties';
       property.innerHTML = properties[i];
       // Set the read property according to the read boolean value.
-      if (properties[i] === true) {
+      if (properties[i] == true) {
         property.innerHTML = 'Read';
         property.className = 'read-status';
-      } else if (properties[i] === false) {
+      } else if (properties[i] == false) {
         property.innerHTML = 'Not Read';
         property.className = 'read-status';
       }
