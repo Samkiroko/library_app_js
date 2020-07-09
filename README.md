@@ -13,7 +13,7 @@
 
 ### Homepage
 
-![image](https://user-images.githubusercontent.com/43377799/86980166-d5372f80-c18b-11ea-8322-6162f55ad626.png)
+![image](https://user-images.githubusercontent.com/43377799/87075395-f00bb180-c228-11ea-95f7-639ede3ebd9a.png)
 
 ---
 
@@ -79,7 +79,6 @@ Feel free to check the [issues page](https://github.com/Samkiroko/library_app_js
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
 
 ## Acknowledgments
 
