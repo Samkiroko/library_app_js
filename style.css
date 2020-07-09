@@ -99,6 +99,7 @@ main {
   width: 100%;
   overflow: hidden;
 }
+
 #top-bar {
   text-align: center;
   vertical-align: middle;
@@ -110,7 +111,6 @@ main {
   letter-spacing: 30px;
   text-transform: uppercase;
   font-weight: 900;
-  font-family: verdana;
   font-size: 50px;
   color: #5e6472;
 }
@@ -127,25 +127,26 @@ main {
 }
 
 .button {
-  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  box-shadow: inset 0 1px 0 0 #fff;
   background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
   background-color: #f9f9f9;
   border-radius: 6px;
   border: 1px solid #dcdcdc;
   display: inline-block;
   cursor: pointer;
-  color: #666666;
-  font-family: Arial;
+  color: #666;
   font-size: 16px;
   font-weight: bold;
   padding: 6px 31px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
+  text-shadow: 0 1px 0 #fff;
 }
+
 .button:hover {
   background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
   background-color: #e9e9e9;
 }
+
 .button:active {
   position: relative;
   top: 1px;
@@ -159,7 +160,7 @@ main {
   margin: 10px;
   border-radius: 2px 4px 4px 2px;
   background-color: #b8f2e6;
-  box-shadow: 10px 10px 5px 0px rgba(151, 146, 153, 0.6);
+  box-shadow: 10px 10px 5px 0 rgba(151, 146, 153, 0.6);
   font-weight: 400;
   color: black;
 }
@@ -168,6 +169,7 @@ main {
   background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
   background-color: #e9e9e9;
 }
+
 .book:active {
   position: relative;
   top: 1px;
@@ -182,9 +184,9 @@ main {
   margin-top: 10px;
   padding-left: 5px;
   font-family: acumin-pro, sans-serif;
-  font-weight: 400;
   opacity: 0.6;
 }
+
 .delete {
   background-color: #faf3dd;
   width: 80%;
@@ -197,27 +199,25 @@ main {
   bottom: 10px;
   left: 14px;
   visibility: hidden;
-  background: linear-gradient(45deg, #dad5dc 0%, #f2ebf4 100%);
   font-family: acumin-pro, sans-serif;
-  font-weight: 400;
   outline: none !important;
 }
-.readed {
+
+.read {
   background-color: #faf3dd;
   width: 80%;
   color: green;
   border: none;
   border-radius: 50px;
-  border: 1px solid burlywood;
   position: relative;
   bottom: 10px;
   left: 14px;
   visibility: hidden;
-  background: linear-gradient(45deg, #dad5dc 0%, #f2ebf4 100%);
   font-family: acumin-pro, sans-serif;
   font-weight: 400;
   outline: none !important;
 }
+
 .bottom-button {
   background-color: #faf3dd;
   color: #5e6472;
@@ -229,12 +229,14 @@ main {
   position: fixed;
   outline: none !important;
 }
+
 #delete-button {
   bottom: 10px;
   right: 300px;
   width: 200px;
 }
-#readed-button {
+
+#read-button {
   bottom: 10px;
   right: 550px;
   width: 200px;
@@ -245,6 +247,7 @@ main {
   right: 50px;
   width: 200px;
 }
+
 .read-status {
   width: 100%;
   min-height: 30px;
@@ -254,9 +257,7 @@ main {
   margin-top: 10px;
   padding-left: 5px;
   font-family: acumin-pro, sans-serif;
-  font-weight: 400;
   opacity: 0.6;
-  font-weight: bold;
 }
 
 /* The popup form - hidden by default */
@@ -279,7 +280,7 @@ main {
 }
 
 /* Full-width input fields */
-.form-container input[type="text"] {
+.form-container input[type='text'] {
   width: 90%;
   padding: 5px;
   margin: 5px 0 10px 0;
@@ -288,7 +289,7 @@ main {
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type="text"]:focus {
+.form-container input[type='text']:focus {
   background-color: #ddd;
   outline: none;
 }

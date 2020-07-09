@@ -7,7 +7,6 @@
       src="https://kit.fontawesome.com/9f61ce6d5c.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css" />
     <link
       rel="stylesheet"
       href="https://bootswatch.com/4/yeti/bootstrap.min.css"
@@ -18,11 +17,12 @@
   <body>
     <div class="container mt-4">
       <h1 class="display-4 text-center">
-        <i class="fas fa-book-open text-primary"></i> My<span
-          class="text-primary"
+        <i class="fas fa-book-open text-success"></i> My<span
+          class="text-success"
           >Library</span
         >Store
       </h1>
+      <div id="library"></div>
       <button class="bottom-button" id="form-button" onclick="openForm()">
         Add New Book
       </button>
@@ -33,11 +33,7 @@
       >
         Delete a Book
       </button>
-      <button
-        class="bottom-button"
-        id="readed-button"
-        onclick="showReadedButton()"
-      >
+      <button class="bottom-button" id="read-button" onclick="showReadButton()">
         Change Read Status
       </button>
       <div class="form-popup" id="myForm">
@@ -71,12 +67,12 @@
             required
           />
 
-          <label for="form-readed"><b>Have you read it yet?</b></label>
+          <label for="form-read"><b>Have you read it yet?</b></label>
           <input
             type="text"
             placeholder="Enter Yes or No"
-            name="form-readed"
-            id="readed"
+            name="form-read"
+            id="read"
             required
           />
 
