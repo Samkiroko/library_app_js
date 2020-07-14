@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css-reset-snippet.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>My Library</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="display-4 text-center">
+        <i class="fas fa-book-open text-success"></i> My<span
+          class="text-success"
+          >Library</span
+        >Store
+      </h1>
+      <div id="library"></div>
+      <button class="bottom-button" id="form-button" onclick="openForm()">
+        Add New Book
+      </button>
+      <button
+        class="bottom-button"
+        id="delete-button"
+        onclick="showDeleteButton()"
+      >
+        Delete a Book
+      </button>
+      <button class="bottom-button" id="read-button" onclick="showReadButton()">
+        Change Read Status
+      </button>
+      <div class="form-popup" id="myForm">
+        <form class="form-container" id="newBookForm">
+          <h1 id="new-book">Add a New Book</h1>
+
+          <label for="-form-title"><b>Title</b></label>
+          <input
+            type="text"
+            placeholder="Enter Title"
+            name="form-title"
+            id="title"
+            required
+          />
+
+          <label for="form-author"><b>Author</b></label>
+          <input
+            type="text"
+            placeholder="Enter Author"
+            name="form-author"
+            id="author"
+            required
+          />
+
+          <label for="form-pages"><b>Number of Pages</b></label>
+          <input
+            type="number"
+            placeholder="Enter Number of Pages"
+            name="form-pages"
+            id="pages"
+            required
+          />
+
+          <label for="form-read"><b>Have you read it yet?</b></label>
+          <input
+            type="text"
+            placeholder="Enter Yes or No"
+            name="form-read"
+            id="read"
+            required
+          />
+
+          <button type="text" class="btn" onclick="addBookToLibrary()">
+            Add New Book
+          </button>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
