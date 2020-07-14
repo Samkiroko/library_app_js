@@ -21,7 +21,7 @@ const read = document.getElementById('read');
 const form = document.getElementById('newBookForm');
 let deleteTracking = 0;
 let readTracking = 0;
-if (localStorage.length === 1) {
+if (localStorage.length == 1) {
   pullFromLocalStorage();
 }
 render();
@@ -31,7 +31,7 @@ class Book {
     this.title = `Title: ${title}`;
     this.author = `Author: ${author}`;
     this.pages = `Number of Pages: ${pages}`;
-    this.read = read.toLowerCase() === 'yes';
+    this.read = read.toLowerCase() == 'yes';
   }
 }
 
@@ -44,10 +44,10 @@ function pullFromLocalStorage() {
 
 function addBookToLibrary() {
   if (
-    title.value === ''
-    || author.value === ''
-    || pages.value === ''
-    || read.value === ''
+    title.value == ''
+    || author.value == ''
+    || pages.value == ''
+    || read.value == ''
   ) return;
   const book = new Book(title.value, author.value, pages.value, read.value);
   myLibrary.push(book);
@@ -71,10 +71,10 @@ function render() {
       property.innerHTML = properties[i];
       // Set the read property according to the read boolean value.
       if (properties[i] == true) {
-        property.innerHTML = 'Read';
+        property.innerHTML = 'read';
         property.className = 'read-status';
       } else if (properties[i] == false) {
-        property.innerHTML = 'Not Read';
+        property.innerHTML = 'Not read';
         property.className = 'read-status';
       }
       div.appendChild(property);
@@ -116,7 +116,7 @@ function addReadButton() {
     index++;
     readButton.onclick = function () {
       const index = readButton.id;
-      if (myLibrary[index].read === true) {
+      if (myLibrary[index].read == true) {
         myLibrary[index].read = false;
         pushToLocalStorage();
       } else {
@@ -140,7 +140,7 @@ function closeForm() {
 }
 
 function showDeleteButton() {
-  if (deleteTracking === 0) {
+  if (deleteTracking == 0) {
     [].forEach.call(document.querySelectorAll('.delete'), (el) => {
       el.style.visibility = 'visible';
     });
@@ -154,7 +154,7 @@ function showDeleteButton() {
 }
 
 function showReadButton() {
-  if (readTracking === 0) {
+  if (readTracking == 0) {
     [].forEach.call(document.querySelectorAll('.read'), (el) => {
       el.style.visibility = 'visible';
     });
